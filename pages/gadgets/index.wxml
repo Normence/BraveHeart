@@ -1,5 +1,14 @@
 <view class="container">
-  <view class="item">
-    <text>指力板训练计划</text>
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-head-title">
+        <text>{{index[0]}}</text>
+      </view>
+      <view class="imagecard-spacing">
+        <image src="./res/images/fingertraining.jpg" class="imagecard" />
+      </view>
+    </view>
   </view>
+  
+  <view class="page-foot">Powered by 清华山野</view>
 </view>

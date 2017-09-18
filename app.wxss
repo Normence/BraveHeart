@@ -1,5 +1,5 @@
 /**app.wxss**/
-.container {
+.container{
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,4 +7,57 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+.page-body {
+  width: 100%;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.page-section-head {
+  padding: 0 50rpx 20rpx;
+  text-align: center;
+}
+
+.page-section-head-title {
+  display: inline-block;
+  padding: 0 25rpx 20rpx;
+  font-size: 25rpx;
+  color: #474747;
+}
+
+.page-section-head-line {
+  margin: 0 auto;
+  width: 150rpx;
+  height: 2rpx;
+  background-color: #000;
+}
+
+.page-section-spacing {
+  box-sizing: border-box;
+  padding: 0 75rpx;
+}
+
+.page-section {
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.page-foot {
+  margin: 100rpx 0 30rpx 0;
+  text-align: center;
+  color: #C5CCC8;
+  font-size: 15rpx;
+}
+
+.imagecard-spacing {
+  box-sizing: border-box;
+  padding: 0 25rpx;
+  margin-bottom: 10rpx;
+}
+
+.imagecard {
+  width: 700rpx;
+  height: 393rpx;
+}

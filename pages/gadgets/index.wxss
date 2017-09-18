@@ -1,1 +1,14 @@
 /* pages/gadgets/index.wxss */
+.container {
+  padding:10rpx 0;
+}
+
+.swiper-item {
+  display: block;
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.swiper {
+  padding: 0 225rpx;
+}
