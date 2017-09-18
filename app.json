@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/gadgets/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "山野",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath": "pages/index/index",
+      "text": "主页"
+    }, {
+      "pagePath": "pages/gadgets/index",
+      "text": "小工具"
+    }],
+    "position": "top"
+  }
+}
