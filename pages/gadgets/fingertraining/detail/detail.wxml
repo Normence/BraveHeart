@@ -1,0 +1,35 @@
+<!--pages/gadgets/fingertraining/timer/timer.wxml-->
+<view class="container">
+  <view class="page-head page-head-background page-head-title">
+    {{ headTitle }}
+  </view>
+
+  <view class="page-body">
+    <view class="detail-list">
+      <view class="detail-list-item page-section page-section-spacing" wx:for="{{trainSet}}" wx:for-item="set">
+        <view class="index">{{ set.index }} 分钟</view>
+        <view class="content">
+          <view wx:for="{{set.content}}">
+            <block wx:if="{{item.type !== 'description'}}">
+              {{item.action}} {{item.time}} {{item.type === "second" ? "秒" : "次"}}
+            </block>
+            <block wx:else>
+              {{item.action}}
+            </block>
+          </view>
+        </view>
+        <view class="place">
+          <view wx:for="{{set.place}}">
+            {{item}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-head page-head-background timer-button-title" bind:tap="handleStartTaped" hidden='true'>
+    START
+  </view>
+
+  <view class="page-foot">Powered by 清华山野</view>
+</view>

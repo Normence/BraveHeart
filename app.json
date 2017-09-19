@@ -2,12 +2,15 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/gadgets/index"
+    "pages/gadgets/index",
+    "pages/gadgets/fingertraining/fingertraining",
+    "pages/gadgets/fingertraining/detail/detail",
+    "pages/gadgets/fingertraining/timer/timer"
   ],
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "山野",
+    "navigationBarTitleText": "山小野",
     "navigationBarTextStyle":"white"
   },
   "tabBar":{

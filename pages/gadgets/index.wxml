@@ -5,7 +5,7 @@
         <text>{{index[0]}}</text>
       </view>
       <view class="imagecard-spacing">
-        <image src="./res/images/fingertraining.jpg" class="imagecard" />
+        <image src="./res/images/fingertraining.jpg" class="imagecard" bind:tap="handleTap"/>
       </view>
     </view>
   </view>

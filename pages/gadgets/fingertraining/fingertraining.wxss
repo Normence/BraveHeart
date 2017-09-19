@@ -1,0 +1,9 @@
+/* pages/gadgets/fingertraining/fingertraining.wxss */
+.container {
+  padding:5rpx 0;
+}
+
+.imagecard {
+  height: 247rpx;
+  width: 700rpx;
+}

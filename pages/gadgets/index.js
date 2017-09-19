@@ -8,5 +8,10 @@ Page({
     index: [
       '攀岩 | Rock Climbing'
     ]
+  },
+  handleTap: function() {
+    wx.navigateTo({
+      url: './fingertraining/fingertraining',
+    })
   }
 })

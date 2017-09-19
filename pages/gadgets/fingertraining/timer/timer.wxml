@@ -1,0 +1,13 @@
+<!--pages/gadgets/fingertraining/timer/timer.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing">{{currentAct}}</view>
+    <view class="page-section page-section-spacing timer-display">17</view>
+    <view class="page-section page-section-spacing">
+      <button>暂停</button>
+      <button>重设</button>
+    </view>
+    <view class="page-section page-section-spacing">NEXT</view>
+  </view>
+  <view class="page-foot">Powered by 清华山野</view>
+</view>

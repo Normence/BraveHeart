@@ -1,0 +1,61 @@
+/* pages/gadgets/fingertraining/timer/timer.wxss */
+.container {
+  padding: 20rpx 0;
+}
+
+.page-head-background {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-head-title {
+  color: white;
+  font-size: 75rpx;
+  font-family: STFangSong, FangSong, PingFangSC-Regular, "Microsoft Yahei";
+}
+
+.page-section-spacing {
+  margin: 0 25rpx 30rpx;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  margin-bottom: 50rpx;
+}
+
+.detail-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 27rpx;
+}
+
+.index {
+  width: 116rpx;
+}
+
+.content {
+  width: 368rpx;
+  padding-right: 20rpx;
+}
+
+.place {
+  width: 156rpx;
+  text-align: right;
+}
+
+.timer-button-title {
+  color: white;
+  font-size: 37rpx;
+  font-family: "Fira code", -apple-system, BlinkMacSystemFont, Helvetica, Arial, san-serif;
+}

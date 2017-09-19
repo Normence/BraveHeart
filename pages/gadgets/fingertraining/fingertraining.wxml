@@ -1,0 +1,19 @@
+<!--pages/gadgets/fingertraining/fingertraining.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-head-title">训练难度 | Level</view>
+      <view class="imagecard-spacing">
+        <image src="../res/images/ft-junior.jpg" class="imagecard" mode="aspectFit" bind:tap="handleTapJunior" />
+      </view>
+      <view class="imagecard-spacing">
+        <image src="../res/images/ft-senior.jpg" class="imagecard" mode="aspectFit" bind:tap="handleTapSenior" />
+      </view>
+      <view class="imagecard-spacing">
+        <image src="../res/images/ft-advanced.jpg" class="imagecard" mode="aspectFit" bind:tap="handleTapAdvanced" />
+      </view>
+    </view>
+  </view>
+
+  <view class="page-foot">Powered by 清华山野</view>
+</view>
