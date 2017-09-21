@@ -27,7 +27,7 @@
     </view>
   </view>
 
-  <view class="page-head page-head-background timer-button-title" bind:tap="handleStartTaped" hidden='true'>
+  <view class="page-head page-head-background timer-button-title" bind:tap="handleStartTaped">
     START
   </view>
 

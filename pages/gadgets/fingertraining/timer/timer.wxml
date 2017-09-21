@@ -1,13 +1,55 @@
 <!--pages/gadgets/fingertraining/timer/timer.wxml-->
 <view class="container">
   <view class="page-body">
-    <view class="page-section page-section-spacing">{{currentAct}}</view>
-    <view class="page-section page-section-spacing timer-display">17</view>
-    <view class="page-section page-section-spacing">
-      <button>暂停</button>
-      <button>重设</button>
+    <view class="page-section-head-title">本组</view>
+    <view class="page-section page-section-spacing detail-list-item">
+      <view class="index">{{ currentAct.index }} 分钟</view>
+      <view class="content">
+        <view wx:for="{{currentAct.content}}">
+          <block wx:if="{{item.type !== 'description'}}">
+            {{item.action}} {{item.time}} {{item.type === "second" ? "秒" : "次"}}
+          </block>
+          <block wx:else>
+            {{item.action}}
+          </block>
+        </view>
+      </view>
+      <view class="place">
+        <view wx:for="{{currentAct.place}}">
+          {{item}}
+        </view>
+      </view>
     </view>
-    <view class="page-section page-section-spacing">NEXT</view>
+
+    <view class="page-section page-section-spacing timer-display">
+      <text class="timer-text">{{display}}</text>
+    </view>
+    <view class="button-section page-section-spacing">
+      <button class="button" type='primary' bind:tap="handleMainButtonTaped" plain="{{status === 'running'}}">{{buttonTitle}}</button>
+      <button class="button" type='warn' disabled='{{disableReset}}' bind:tap="handleResetButtonTaped">重设</button>
+    </view>
+
+    <view class="page-section-head-title">下一组</view>
+    <view class="page-section page-section-spacing detail-list-item" wx:if="{{!noMore}}">
+      <view class="index">{{ oncomingAct.index }} 分钟</view>
+      <view class="content">
+        <view wx:for="{{oncomingAct.content}}">
+          <block wx:if="{{item.type !== 'description'}}">
+            {{item.action}} {{item.time}} {{item.type === "second" ? "秒" : "次"}}
+          </block>
+          <block wx:else>
+            {{item.action}}
+          </block>
+        </view>
+      </view>
+      <view class="place">
+        <view wx:for="{{oncomingAct.place}}">
+          {{item}}
+        </view>
+      </view>
+    </view>
+    <view wx:else class="page-section page-section-spacing detail-list-item">没有下一组</view>
   </view>
+
   <view class="page-foot">Powered by 清华山野</view>
 </view>

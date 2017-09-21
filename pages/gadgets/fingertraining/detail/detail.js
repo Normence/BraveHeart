@@ -6,7 +6,7 @@ Page({
     trainSet: []
   },
 
-  handleStartTaped: function() {
+  handleStartTaped: function () {
     wx.navigateTo({
       url: '../timer/timer?type=' + this.data.type,
     })
@@ -46,6 +46,7 @@ Page({
             "time": 15,
             "action": "悬吊",
           }],
+          "break": 45,
           "place": ["大把手"],
         }, {
           "index": 2,
@@ -54,6 +55,7 @@ Page({
             "time": 1,
             "action": "引体",
           }],
+          "break": 55,
           "place": ["圆摩擦"],
         }, {
           "index": 3,
@@ -62,6 +64,7 @@ Page({
             "time": 10,
             "action": "悬吊",
           }],
+          "break": 50,
           "place": ["中边沿"],
         }, {
           "index": 4,
@@ -74,6 +77,7 @@ Page({
             "time": 3,
             "action": "耸肩",
           }],
+          "break": 30,
           "place": ["三指洞"],
         }, {
           "index": 5,
@@ -86,6 +90,7 @@ Page({
             "time": 2,
             "action": "引体",
           }],
+          "break": 30,
           "place": ["中边沿"],
         }, {
           "index": 6,
@@ -98,6 +103,7 @@ Page({
             "time": 5,
             "action": "举膝",
           }],
+          "break": 35,
           "place": ["圆摩擦", "三指洞"],
         }, {
           "index": 7,
@@ -106,6 +112,7 @@ Page({
             "time": 4,
             "action": "引体",
           }],
+          "break": 40,
           "place": ["中边沿"],
         }, {
           "index": 8,
@@ -114,6 +121,7 @@ Page({
             "time": 10,
             "action": "悬吊",
           }],
+          "break": 50,
           "place": ["中边沿"],
         }, {
           "index": 9,
@@ -122,6 +130,7 @@ Page({
             "time": 3,
             "action": "引体",
           }],
+          "break": 45,
           "place": ["大把手"],
         }, {
           "index": 10,
@@ -149,6 +158,7 @@ Page({
             "time": 3,
             "action": "引体",
           }],
+          "break": 30,
           "place": ["中边沿"],
         }, {
           "index": 2,
@@ -160,7 +170,8 @@ Page({
             "type": "second",
             "time": 20,
             "action": "悬吊",
-          }],
+            }],
+          "break": 30,
           "place": ["圆摩擦", "中边沿"],
         }, {
           "index": 3,
@@ -172,7 +183,8 @@ Page({
             "type": "second",
             "time": 15,
             "action": "90度曲臂悬吊",
-          }],
+            }],
+          "break": 25,
           "place": ["小边沿", "三指洞"],
         }, {
           "index": 4,
@@ -181,6 +193,7 @@ Page({
             "time": 30,
             "action": "悬吊",
           }],
+          "break": 30,
           "place": ["圆摩擦"],
         }, {
           "index": 5,
@@ -192,7 +205,8 @@ Page({
             "type": "count",
             "time": 4,
             "action": "引体",
-          }],
+            }],
+          "break": 20,
           "place": ["中边沿", "三指洞"],
         }, {
           "index": 6,
@@ -201,6 +215,7 @@ Page({
             "time": 6,
             "action": "不对称引体每手各",
           }],
+          "break": 0,
           "place": ["高位手把手", "低位手小边沿"],
         }, {
           "index": 7,
@@ -212,7 +227,8 @@ Page({
             "type": "second",
             "time": 15,
             "action": "悬吊",
-          }],
+            }],
+          "break": 0,
           "place": ["大把手", "中边沿"],
         }, {
           "index": 8,
@@ -221,6 +237,7 @@ Page({
             "time": 25,
             "action": "悬吊",
           }],
+          "break": 35,
           "place": ["中边沿"],
         }, {
           "index": 9,
@@ -232,7 +249,8 @@ Page({
             "type": "count",
             "time": 3,
             "action": "引体",
-          }],
+            }],
+          "break": 25,
           "place": ["圆摩擦", "大把手"],
         }, {
           "index": 10,
@@ -259,7 +277,8 @@ Page({
             "type": "count",
             "time": 3,
             "action": "引体",
-          }],
+            }],
+          "break": 15,
           "place": ["圆摩擦", "中边沿"],
         }, {
           "index": 2,
@@ -271,7 +290,8 @@ Page({
             "type": "second",
             "time": 20,
             "action": "L-SIT悬吊或者屈膝悬吊",
-          }],
+            }],
+          "break": 20,
           "place": ["圆摩擦"],
         }, {
           "index": 3,
@@ -283,15 +303,17 @@ Page({
             "type": "second",
             "time": 25,
             "action": "悬吊",
-          }],
+            }],
+          "break": 10,
           "place": ["三指洞"],
         }, {
           "index": 4,
           "content": [{
             "type": "second",
             "time": 30,
-            "action": "从三指洞开始，中边、小边各悬吊5秒，至圆摩擦结束并悬吊20秒",
+            "action": "从三指洞开始，中边、小边各悬吊 5 秒，至圆摩擦结束并悬吊 20 秒 共",
           }],
+          "break": 30,
           "place": [],
         }, {
           "index": 5,
@@ -303,7 +325,8 @@ Page({
             "type": "second",
             "time": 20,
             "action": "换手单臂悬吊",
-          }],
+            }],
+          "break": 20,
           "place": ["中边沿"],
         }, {
           "index": 6,
@@ -312,6 +335,7 @@ Page({
             "time": 5,
             "action": "不对称引体每手各",
           }],
+          "break": 20,
           "place": ["高位手平摩擦", "低位手三指洞"],
         }, {
           "index": 7,
@@ -320,6 +344,7 @@ Page({
             "time": 30,
             "action": "90度曲臂悬吊",
           }],
+          "break": 30,
           "place": ["小边沿"],
         }, {
           "index": 8,
@@ -328,6 +353,7 @@ Page({
             "time": 15,
             "action": "悬吊",
           }],
+          "break": 45,
           "place": ["三指洞"],
         }, {
           "index": 9,
@@ -339,7 +365,8 @@ Page({
             "type": "second",
             "time": 5,
             "action": "front lever",
-          }],
+            }],
+          "break": 20,
           "place": ["圆摩擦"],
         }, {
           "index": 10,
@@ -351,13 +378,14 @@ Page({
             "type": "count",
             "time": 2,
             "action": "两手指引体（注意减重，若需要）",
-          }],
+            }],
+          "break": 30,
           "place": ["三指洞"],
         }, {
           "index": 11,
           "content": [{
             "type": "description",
-            "action": "120度曲臂悬吊至力竭",
+            "action": "120度曲臂悬吊至力竭 换",
           }, {
             "type": "description",
             "action": "直臂悬吊至力竭",

@@ -9,11 +9,16 @@
   ],
   "window":{
     "backgroundTextStyle":"dark",
+    "backgroundColor": "#F8F8F8",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "山小野",
     "navigationBarTextStyle":"white"
   },
   "tabBar":{
+    "color": "#FFF",
+    "selectedColor": "#FFF",
+    "backgroundColor": "#000000",
+    "borderStyle": "white",
     "list":[{
       "pagePath": "pages/index/index",
       "text": "主页"
