@@ -13,7 +13,7 @@
 }
 
 .timer-text {
-  font-size: 240rpx;
+  font-size: 230rpx;
   font-family: Fira Code, Courier New, Courier, monospace;
 }
 

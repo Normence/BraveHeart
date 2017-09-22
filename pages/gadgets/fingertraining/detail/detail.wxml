@@ -25,6 +25,7 @@
         </view>
       </view>
     </view>
+    <view class="page-section-spacing note">Note: 每个引体按5秒，每个举膝按3秒计算。</view>
   </view>
 
   <view class="page-head page-head-background timer-button-title" bind:tap="handleStartTaped">

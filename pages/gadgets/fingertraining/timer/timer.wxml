@@ -49,6 +49,8 @@
       </view>
     </view>
     <view wx:else class="page-section page-section-spacing detail-list-item">没有下一组</view>
+
+    <view class="page-section-spacing note">Note: 每个引体按5秒，每个举膝按3秒计算。</view>
   </view>
 
   <view class="page-foot">Powered by 清华山野</view>
