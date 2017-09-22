@@ -4,6 +4,16 @@ var timerCount  // counts of timer
 
 const normTime = (i) => (i > 9 ? String(i) : '0' + i)
 
+var showNetwork = false
+
+const soundUrls = {
+  ready: 'https://raw.githubusercontent.com/Normence/BraveHeart/master/pages/gadgets/fingertraining/res/sounds/begin-single.wav',
+  begin: 'https://raw.githubusercontent.com/Normence/BraveHeart/master/pages/gadgets/fingertraining/res/sounds/begin-dual.wav',
+  count: 'https://raw.githubusercontent.com/Normence/BraveHeart/master/pages/gadgets/fingertraining/res/sounds/count.wav',
+  break: 'https://raw.githubusercontent.com/Normence/BraveHeart/master/pages/gadgets/fingertraining/res/sounds/break.mp3',
+  finish: 'https://raw.githubusercontent.com/Normence/BraveHeart/master/pages/gadgets/fingertraining/res/sounds/finish.wav',
+}
+
 Page({
   data: {
     type: '',
@@ -92,17 +102,20 @@ Page({
     this.setData({
       display: '准备',
     })
+    this.playSounds(soundUrls.ready)
     let tempCount = 3
     timer = setInterval(() => {
       if (tempCount === 0) {
         this.setData({
           display: '开始',
         })
+        this.playSounds(soundUrls.begin)
         tempCount--
       } else if (tempCount < 0) {
         clearInterval(timer)
         this.runTimer()
       } else {
+        this.playSounds(soundUrls.count)
         this.setData({
           display: normTime(tempCount--),
         })
@@ -155,5 +168,22 @@ Page({
       timerCount = 60
       this.runTimer()
     }
+  },
+
+  playSounds(s) {
+    wx.stopBackgroundAudio()
+    wx.playBackgroundAudio({
+      dataUrl: s,
+      fail: function (res) {
+        if (!showNetwork) {
+          wx.showModal({
+            title: '提示音',
+            content: '网络差或无网络，可能无法播放提示音',
+            showCancel: false,
+          })
+          showNetwork = true
+        }
+      },
+    })
   },
 })
