@@ -5,7 +5,8 @@
     "pages/gadgets/index",
     "pages/gadgets/fingertraining/fingertraining",
     "pages/gadgets/fingertraining/detail/detail",
-    "pages/gadgets/fingertraining/timer/timer"
+    "pages/gadgets/fingertraining/timer/timer",
+    "pages/member/member"
   ],
   "window":{
     "backgroundTextStyle":"dark",
@@ -22,6 +23,9 @@
     "list":[{
       "pagePath": "pages/index/index",
       "text": "主页"
+    }, {
+      "pagePath": "pages/member/member",
+      "text": "会员"
     }, {
       "pagePath": "pages/gadgets/index",
       "text": "小工具"

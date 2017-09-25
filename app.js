@@ -1,3 +1,5 @@
+var wilddog = require('wilddog-weapp-all')
+
 //app.js
 App({
   onLaunch: function () {
@@ -32,8 +34,25 @@ App({
         }
       }
     })
+
+    // sign in wilddog
+    var config = {
+      syncURL: "https://wd3168593909ihxuua.wilddogio.com",
+      authDomain: "wd3168593909ihxuua.wilddog.com"
+    }
+    wilddog.initializeApp(config)
+    wilddog.auth().signInWeapp().then(user => {
+      console.log("Succeed, sign in weapp: ", user.uid)
+      this.user = user
+    }).catch(err => {
+      console.error("Fail, sign in weapp: ", err)
+    })
+    this.ref = wilddog.sync().ref()
   },
   globalData: {
     userInfo: null
-  }
+  },
+  getRootRef() {
+    return this.ref
+  },
 })
