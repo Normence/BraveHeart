@@ -1,6 +1,7 @@
 // pages/gadgets/fingertraining/timer/timer.js
 var timer       // timer received from .setInterval
 var timerCount  // counts of timer
+const innerAudioContext = wx.createInnerAudioContext()  // audio controller
 
 const normTime = (i) => (i > 9 ? String(i) : '0' + i)
 const actConsume = (c) => {
@@ -49,6 +50,20 @@ Page({
       currentAct: s[this.data.currentIndex],
       oncomingAct: s[this.data.currentIndex + 1],
       length: s.length,
+    })
+
+    innerAudioContext.obeyMuteSwitch = false  // not follow mute switch
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
+      if (!showNetwork) {
+        wx.showModal({
+          title: '网络情况',
+          content: '网络差或无网络，可能无法播放提示音',
+          showCancel: false,
+        })
+        showNetwork = true
+      }
     })
   },
 
@@ -140,7 +155,7 @@ Page({
       if (timerCount === 0 && !data.noMore) {
         // 一组到时
         this.setData({
-          display: '下一组',
+          display: 'NEXT',
         })
         this.playSounds(soundUrls.begin)
         timerCount--
@@ -197,19 +212,14 @@ Page({
   },
 
   playSounds(s) {
-    wx.stopBackgroundAudio()
-    wx.playBackgroundAudio({
-      dataUrl: s,
-      fail: function (res) {
-        if (!showNetwork) {
-          wx.showModal({
-            title: '网络情况',
-            content: '网络差或无网络，可能无法播放提示音',
-            showCancel: false,
-          })
-          showNetwork = true
-        }
-      },
-    })
+    innerAudioContext.src = s
+    innerAudioContext.play()
+  },
+
+  onUnload() {
+    innerAudioContext.destroy()
+    if(timer) {
+      clearInterval(timer)
+    }
   },
 })
